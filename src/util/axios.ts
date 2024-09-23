@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getToken } from "./token";
 
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = import.meta.env.VITE_HOST_API;
 
 axios.interceptors.request.use(
   (request) => {
